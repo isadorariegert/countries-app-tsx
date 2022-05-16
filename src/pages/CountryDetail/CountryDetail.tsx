@@ -1,12 +1,9 @@
 import { useParams } from "react-router-dom";
 import CountryInfo from "../../components/CountryInfo/CountryInfo";
-// import "./CountryDetail.module.scss";
 import { useState, useEffect } from "react";
 import api from "../../api";
 import { CountryTS } from "../../models/Country"
 import "./CountryDetail.scss";
-
-
 
 function CountryDetail() {
     const [country, setCountry] = useState<CountryTS[]>([]);

@@ -1,3 +1,5 @@
+@import "./../layout/styles/variables.scss";
+
 .CardContainer {
     width: 300px;
     display: flex;
@@ -13,7 +15,7 @@
     }
 
     h2 {
-        color: #0d1c44;
+        color: $darkBlueColor;
         font-size: 36px;
         margin: 15px 0;
         text-align: center;
@@ -21,7 +23,7 @@
 
     p {
         margin-bottom: 10px;
-        color: #0d1c44;
+        color: $darkBlueColor;
     }
 
     @media only screen and (min-width: 790px) {

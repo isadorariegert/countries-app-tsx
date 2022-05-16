@@ -1,17 +1,5 @@
+@import "./../../layout/styles/variables.scss";
+
 .BackButton {
-    display: flex;
-    width: 100px;
-    height: 40px;
-    margin: 10px auto;
-    justify-content: center;
-    align-items: center;
-    border-style: none;
-    border-radius: 30px;
-    background-color: #ed2c2c;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
+    @include buttonStyle($redColor, $whiteColor);
 }

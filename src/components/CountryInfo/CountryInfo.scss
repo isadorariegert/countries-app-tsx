@@ -1,3 +1,5 @@
+@import "./../layout/styles/variables.scss";
+
 .CardContentContainer {
     width: 90vw;
     display: flex;
@@ -21,21 +23,21 @@
     }
 
     h2 {
-        color: #0d1c44;
+        color: $darkBlueColor;
         font-size: 32px;
         margin: 15px 0;
     }
 
     &_text {
-        color: #0d1c44;
+        color: $darkBlueColor;
         font-size: 18px;
         width: 100%;
     }
 
     &_borders {
-        background-color: #0d1c44;
-        border: 2px solid #00fad3;
-        color: #fff;
+        background-color: $darkBlueColor;
+        border: 2px solid $lightBlueColor;
+        color: $whiteColor;
         padding: 10px 0 20px 0;
         text-align: center;
         margin-top: 10px;
@@ -53,15 +55,15 @@
         justify-content: center;
         
         p{
-            border: 1px solid #00fad3;
-            color: #00fad3;
+            border: 1px solid $lightBlueColor;
+            color: $lightBlueColor;
             font-weight: 500;
             margin: 10px;
             padding: 10px;
 
             &:hover {
-                background-color: #00fad3;
-                color: #0d1c44;
+                background-color: $lightBlueColor;
+                color: $darkBlueColor;
             }
         }
     }
@@ -93,7 +95,6 @@
         &_borders {
             margin-top: 40px;
             width: 100%;
-
         }
     }
 
