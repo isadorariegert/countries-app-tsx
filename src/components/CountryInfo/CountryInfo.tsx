@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { CountryTS } from '../../models/Country'
-import BackButton from './BackButton/BackButton';
+import BackButton from './backButton/BackButton';
 import './CountryInfo.scss'
 
 export default function CountryInfo({ cca3, flags, name, capital, population, borders, languages, currencies}: CountryTS) {

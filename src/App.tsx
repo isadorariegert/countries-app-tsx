@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Header from './components/layout/Header';
-import CountriesList from './pages/CountriesList/CountriesList';
-import CountryDetail from './pages/CountryDetail/CountryDetail';
+import CountriesList from './pages/countriesList/CountriesList';
+import CountryDetail from './pages/countryDetail/CountryDetail';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import CountryInfo from "../../components/CountryInfo/CountryInfo";
+import CountryInfo from "../../components/countryInfo/CountryInfo";
 import { useState, useEffect } from "react";
 import api from "../../api";
 import { CountryTS } from "../../models/Country"
@@ -14,7 +14,6 @@ function CountryDetail() {
         api.get("alpha/"+ code)
         .then((response) => {
             setCountry(response.data);
-            console.log(response.data);
         })
     }, [code]);
 

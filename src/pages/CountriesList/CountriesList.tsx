@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CountryCard } from "../../components/CountryCard/CountryCard";
+import { CountryCard } from "../../components/countryCard/CountryCard";
 import "./CountriesList.scss";
 import api from "../../api";
 import { CountriesTS } from "../../models/Countries"

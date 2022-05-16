@@ -1,5 +1,5 @@
 import './CountryCard.scss'
-import LinkButton from './LinkButton/LinkButton';
+import LinkButton from './linkButton/LinkButton';
 
 import { CountriesTS } from '../../models/Countries'; //import countries list interface
 
