@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import { CountryTS } from '../../models/Country'
 import BackButton from './BackButton/BackButton';
 import './CountryInfo.scss'
 
-export default function CountryInfo({ cca2, flags, name, capital, population, borders, languages, currencies}: CountryTS) {
+export default function CountryInfo({ cca3, flags, name, capital, population, borders, languages, currencies}: CountryTS) {
   const moedas = Object.getOwnPropertyNames(currencies).at(0);
   var moeda: string = moedas !== undefined ? currencies?.[moedas]?.name : 'Nao existe';
   
@@ -11,31 +12,40 @@ export default function CountryInfo({ cca2, flags, name, capital, population, bo
 
   return (
     <div className="CardContentContainer">
-      <div className="CardContentContainer_button">
-        <BackButton to="/" text="Back" />
+      <div className="CardContentContainer_country">
+        <div className="CardContentContainer_image">
+          <img src={flags.png} alt="" />
+        </div>
+
+        <div className="CardContentContainer_text">
+          <h2>{name.common}</h2>
+          <p>Capital: {capital}</p>
+          <p>Populaçao: {population}</p>
+          <p>Currency: {moeda}</p>
+          <p>Languages: {lingua}</p>
+        
+        </div>
       </div>
-      <h2>{name.common}</h2>
-      <img src={flags.png} alt="" />
-      <div className="CardContentContainer_text">
-        <p>Capital: {capital}</p>
-        <p>Populaçao: {population}</p>
-        <p>Currency: {moeda}</p>
-        <p>languages: {lingua}</p>
-       {
+
+      {
          borders &&
-          <div className="CardContentContainer_text__borders">
+          <div className="CardContentContainer_borders">
             <p>Bordering Countries:</p>
             <div className="CardContentContainer_links">
               {
-                borders?.map((borders:any, index:number) => (
-                  <p  key={index}>{borders}</p>
-                ))
+                borders?.map((borders:any, index:number) => 
+                <Link key={index} to={`/countrydetail/${borders}`}>
+                  <p >{borders}</p>
+                </Link>
+                )
               }
             </div>
           </div>
         }
-      </div>
 
+      <div className="CardContentContainer_button">
+        <BackButton to="/" text="Back" />
+      </div>
     </div>
   )
 }

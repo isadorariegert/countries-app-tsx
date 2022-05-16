@@ -1,11 +1,10 @@
 import './CountryCard.scss'
 import LinkButton from './LinkButton/LinkButton';
 
-import { Link } from 'react-router-dom';
-import { CountriesTS } from '../../models/Countries';
+import { CountriesTS } from '../../models/Countries'; //import countries list interface
 
 
-export const CountryCard = ({ cca2, flags, name, capital, population }: CountriesTS) => {
+export const CountryCard = ({ cca3, flags, name, capital, population }: CountriesTS) => {
 
     return (
         <div className="CardContainer">
@@ -13,7 +12,7 @@ export const CountryCard = ({ cca2, flags, name, capital, population }: Countrie
             <h2>{name.common}</h2>
             <p>Capital: {capital}</p>
             <p>Populaçao: {population}</p>
-            <LinkButton to={`/countrydetail/${cca2}`} text="View More" />
+            <LinkButton to={`/countrydetail/${cca3}`} text="View More" />
         </div>
     )
 }

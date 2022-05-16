@@ -11,23 +11,22 @@ import "./CountryDetail.scss";
 function CountryDetail() {
     const [country, setCountry] = useState<CountryTS[]>([]);
 
-    const {name} = useParams();
+    const {code} = useParams();
 
     useEffect(() => {
-        api.get("alpha/"+ name)
+        api.get("alpha/"+ code)
         .then((response) => {
             setCountry(response.data);
             console.log(response.data);
         })
-    }, [name]);
+    }, [code]);
 
     return (
         <div className="CountryDetailContainer">
 
-
         {country?.map((country, index) => ( 
             <CountryInfo 
-                cca2={country.cca2}
+                cca3={country.cca3}
                 key={index}
                 name={country.name}
                 capital={country.capital} 

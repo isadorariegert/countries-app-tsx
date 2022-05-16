@@ -2,7 +2,7 @@ import { CountryName } from "./CountryName"
 import { FlagsTS } from "./Flags"
 
 export interface CountriesTS {
-    cca2: string,
+    cca3: string,
     key: number,
     name: CountryName,
     capital: string,
